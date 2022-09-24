@@ -1,17 +1,19 @@
 import { useSession, signIn, signOut } from "next-auth/react"
+
 export default function Component() {
   const { data: session } = useSession()
   if (session) {
     return (
       <>
-        Signed in as {session.user.email} <br />
+       <p> Welcome {session.user.email} </p>
+       <image src={session.user.image} alt="Avatar" style={{borderRadius: '50px'}}/>
         <button onClick={() => signOut()}>Sign out</button>
       </>
     )
   }
   return (
     <>
-      Not signed in <br />
+      You are not signed in<br />
       <button onClick={() => signIn()}>Sign in</button>
     </>
   )
