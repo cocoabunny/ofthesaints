@@ -11,13 +11,7 @@ if (status === 'authenticated') {
             <button onClick={()=> signOut()}>Sign Out</button>
         </>
     );
-     } else {
-    return (
-        <>
-            <p>Nice Try</p>
-        </>
-    );
-    }
+     }
 };
 
 export default secret;
