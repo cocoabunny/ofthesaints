@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+ 
   body {
     @apply bg-[#eee9c0] text-black tracking-wide
+  }
+
+  h1 {
+@apply font-bold text-4xl
   }
 }

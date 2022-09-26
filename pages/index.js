@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
 
 
 export default function Component() {
@@ -10,7 +11,7 @@ export default function Component() {
         <meta name="description" content="Canaan de los Santos' Portfolio" />
         <link rel="icon" href="/coco_test.ico" />
       </Head>
-
+<Navbar />
     </div>
   )
 }
