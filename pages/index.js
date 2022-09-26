@@ -6,7 +6,7 @@ export default function Component() {
     <div >
       <Head>
         <title>Of The Saints</title>
-        <h1>Howdy</h1>
+        <h1>HOWDY DOWDY</h1>
         <meta name="description" content="Canaan de los Santos' Portfolio" />
         <link rel="icon" href="/coco_test.ico" />
       </Head>
