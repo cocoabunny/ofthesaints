@@ -2,12 +2,8 @@ import Head from 'next/head';
 import React from 'react';
 import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
-// import {useSession} from 'next-auth/react';
 
-// if (status === 'authenticated') 
 export default function Component() {
-
-  // const { data: session, status } = useSession();
 
       return(
     <div >
@@ -17,9 +13,9 @@ export default function Component() {
         <link rel="icon" href="/coco_test.ico" />
       </Head>
 <Navbar />
-<body className='pt-[5em]'>
+<body className=''>
 {/* -- About Section --  */}
-<section className='py-10'>
+<section className='pt-20'>
 <span>
 <h2>About</h2>
 </span>

@@ -1,11 +1,15 @@
-import { SERVER_PROPS_ID } from 'next/dist/shared/lib/constants'
 import React from 'react'
 
 
 const ProjectCard = () => {
   return (
     <div className='bg-slate-600'>
-<h1>I'm a stinky portfolio piece</h1>
+<h2>Project Title</h2>
+<h3>Project Goals</h3>
+<ul>
+<li>Create a to do list</li>
+<li>react app must be able to be implemented into clients existing website</li>
+</ul> 
     </div>
   )
 }
