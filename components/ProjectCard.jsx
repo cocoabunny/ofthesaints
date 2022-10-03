@@ -4,7 +4,7 @@ import React from 'react'
 const ProjectCard = () => {
   return (
     <div className='bg-slate-600'>
-<h2>Project Title</h2>
+<h2>ITA Panels</h2>
 <h3>Project Goals</h3>
 <ul>
 <li>Create a to do list</li>
