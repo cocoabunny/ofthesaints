@@ -1,7 +1,9 @@
 import Head from "next/head";
 import React from "react";
+import { useSession } from "next-auth/react";
 import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
+import ConditionalTest from "../components/conditionalTest";
 
 const Page = () => {
   return (
@@ -14,6 +16,7 @@ const Page = () => {
 
       <Navbar />
 
+      {/* <ConditionalTest /> */}
       <main className="">
         {/* -- About Section --  */}
         <section className="pt-20">

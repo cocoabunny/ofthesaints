@@ -12,13 +12,13 @@ const Page = ({ articleCount = 0 }) => {
           This is a secret Page, congrats {session.user.name}
         </p>
         <p>Article count: {articleCount}</p>
-        <Image
+        {/* <Image
           src={session.user.image}
           layout="fixed"
           height="200"
           width="200"
           alt=""
-        />
+        /> */}
         <p>{JSON.stringify(session)}</p>
         <button onClick={() => signOut()}>Sign Out</button>
       </>

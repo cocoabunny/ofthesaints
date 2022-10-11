@@ -3,6 +3,8 @@ import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import { PrismaClient } from "@prisma/client";
 import { signIn } from "next-auth/react";
+import { getToken } from "next-auth/jwt";
+import { IDK } from "../../middleware";
 
 const prisma = new PrismaClient();
 
@@ -17,7 +19,6 @@ export default NextAuth({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
-    // ...add more providers here
   ],
   events: {
     async signIn(message) {
@@ -36,8 +37,4 @@ export default NextAuth({
       });
     },
   },
-  // secret: process.env.JWT_SECRET
-  //   callbacks: {
-  //     async
-  //   }
 });

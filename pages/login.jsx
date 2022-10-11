@@ -1,4 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import Image from "next/image";
 
 const LoginPage = () => {
   const { data: session } = useSession();
@@ -7,11 +8,14 @@ const LoginPage = () => {
     return (
       <>
         <p>Welcome {session.user.email}</p>
-        <img
+        {/* <Image
           src={session.user.image}
+          layout="fixed"
+          height="200"
+          width="200"
           alt="Avatar"
           style={{ borderRadius: "50px" }}
-        />
+        /> */}
         <button onClick={() => signOut()}>Sign out</button>
       </>
     );
