@@ -17,7 +17,8 @@ const Page = () => {
       <Navbar />
 
       {/* <ConditionalTest /> */}
-      <main className="">
+      <ConditionalTest />
+      <main>
         {/* -- About Section --  */}
         <section className="pt-20">
           <span>
