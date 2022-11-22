@@ -13,11 +13,11 @@ const Page = () => {
         <meta name="description" content="Canaan de los Santos' Portfolio" />
         <link rel="icon" href="/coco_test.ico" />
       </Head>
-
       <Navbar />
-
-      {/* <ConditionalTest /> */}
-      <ConditionalTest />
+      <div className="pt-20">
+        {/* <ConditionalTest /> */}
+        <ConditionalTest />
+      </div>
       <main>
         {/* -- About Section --  */}
         <section className="pt-20">
