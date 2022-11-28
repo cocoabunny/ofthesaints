@@ -7,7 +7,7 @@ import ConditionalTest from "../components/conditionalTest";
 
 const Page = () => {
   return (
-    <div>
+    <div className="">
       <Head>
         <title>Of The Saints</title>
         <meta name="description" content="Canaan de los Santos' Portfolio" />
