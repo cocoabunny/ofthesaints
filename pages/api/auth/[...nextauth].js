@@ -4,7 +4,6 @@ import GitHubProvider from "next-auth/providers/github";
 import { PrismaClient } from "@prisma/client";
 import { signIn } from "next-auth/react";
 import { getToken } from "next-auth/jwt";
-import { IDK } from "../../middleware";
 
 const prisma = new PrismaClient();
 

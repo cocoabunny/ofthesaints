@@ -4,10 +4,12 @@ import Image from "next/image";
 const LoginPage = () => {
   const { data: session } = useSession();
 
-  if (session) {
+  if (session && session.user) {
     return (
-      <>
-        <p>Welcome {session.user.email}</p>
+      <div>
+        <p>
+          Welcome {session.user.name};
+        </p>
         {/* <Image
           src={session.user.image}
           layout="fixed"
@@ -17,7 +19,7 @@ const LoginPage = () => {
           style={{ borderRadius: "50px" }}
         /> */}
         <button onClick={() => signOut()}>Sign out</button>
-      </>
+      </div>
     );
   }
 
