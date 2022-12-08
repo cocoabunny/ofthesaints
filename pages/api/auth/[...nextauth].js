@@ -2,13 +2,10 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import { PrismaClient } from "@prisma/client";
-import { signIn } from "next-auth/react";
-import { getToken } from "next-auth/jwt";
 
 const prisma = new PrismaClient();
 
 export default NextAuth({
-  // Configure one or more authentication providers
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

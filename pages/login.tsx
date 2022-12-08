@@ -8,8 +8,10 @@ const LoginPage = () => {
     return (
       <div>
         <p>
-          Welcome {session.user.name};
+          Welcome {session.user.name}
         </p>
+{/* <Image src={session.user.image} alt="lol" layout="fill"/> */}
+
         {/* <Image
           src={session.user.image}
           layout="fixed"
@@ -18,7 +20,7 @@ const LoginPage = () => {
           alt="Avatar"
           style={{ borderRadius: "50px" }}
         /> */}
-        <button onClick={() => signOut()}>Sign out</button>
+        <button className="bg-blue-300" onClick={() => signOut()}>Sign out</button>
       </div>
     );
   }
@@ -26,10 +28,11 @@ const LoginPage = () => {
   return (
     <>
       <p>
-        You are not signed in
+        Currently you are not signed, in.
         <br />
+        Would you like to change that?
       </p>
-      <button onClick={() => signIn()}>Sign in</button>
+      <button className="bg-red-300" onClick={() => signIn()}>Sign in</button>
     </>
   );
 };

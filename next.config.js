@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["avatars.githubusercontent.com", " lh3.googleusercontent.com"],
+    domains: ["1h3.googleusercontent.com", "avatars.githubusercontent.com"],
     formats: ["image/avif", "image/webp"],
   },
 };
