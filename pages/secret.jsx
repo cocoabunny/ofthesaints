@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useSession, signOut, getSession } from "next-auth/react";
 
 const Page = ({ articleCount = 0 }) => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
 
   return (
     <>
