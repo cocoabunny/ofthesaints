@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
- 
   body {
     @apply bg-[#DDC6A8] text-[#38250E] tracking-wide 
   }

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useSession, signOut, getSession } from "next-auth/react";
 
-const Page = ({ articleCount = 0 }) => {
+const Page = () => {
   const { data: session } = useSession();
 
   return (
@@ -37,7 +37,7 @@ export const getServerSideProps = async (context) => {
     };
   }
 
-  const { name, email } = session.user;
+  // const { name, email } = session.user;
 
   // Where to save?
   // - Airtable <-- Easy, through the Airtable API
@@ -55,8 +55,6 @@ export const getServerSideProps = async (context) => {
   // - NextJS Flat File CMS (w/ Markdown) https://nextjs.org/blog/markdown
 
   return {
-    props: {
-      articleCount: 10,
-    },
+    props: { session },
   };
 };
