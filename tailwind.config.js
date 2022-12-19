@@ -5,6 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      'cream': '#',
+      'burn': '#',
+      'coco': '#',
+      '117': '#',
+      'sprinkles': '#'
+
+    }
     fontFamily: {},
 
     extend: {},
