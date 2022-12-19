@@ -6,14 +6,16 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'cream': '#',
-      'burn': '#',
-      'coco': '#',
-      '117': '#',
-      'sprinkles': '#'
+      cream: "#DDC6A8",
+      burn: "#B6772E",
+      coco: "#38250E",
+      chief: "#4B584B",
+      peach: "#",
+    },
 
-    }
-    fontFamily: {},
+    fontFamily: {
+      studio: ["Crimson Pro", "serif"],
+    },
 
     extend: {},
   },

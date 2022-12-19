@@ -13,7 +13,8 @@ const Page = () => {
   const { data, status } = useSession();
 
   return (
-    <div className={`${status === 'authenticated' ? 'bg-yellow-900' : '' }`}>
+    <div className="font-studio">
+    <div className={`${status === 'authenticated' ? 'bg-cream text-coco' : 'bg-coco text-cream' } `}>
       <Head>
         <title>Of The Saints</title>
         <meta name="description" content="Canaan de los Santos' Portfolio" />
@@ -25,7 +26,7 @@ const Page = () => {
       <div className="pt-20">
         <ConditionalTest status={status} />
       </div>
-      <main>
+      <main className="">
         {/* -- About Section --  */}
         <section className="pt-20">
           <span>
@@ -97,6 +98,7 @@ const Page = () => {
           <div>{/* <ProjectCard /> */}</div>
         </section>
       </main>
+    </div>
     </div>
   );
 };
