@@ -1,16 +1,16 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { useSession, signOut, getSession } from "next-auth/react";
 
 const Page = ({ articleCount = 0 }) => {
   const { data: session } = useSession();
 
+  if (session) {
   return (
-    <>
+<div className="bg-chief h-screen w-full">
       <p className="bg-rose-200">
         This is a secret Page, congrats {session.user.name}
       </p>
-      <p>Article count: {articleCount}</p>
       {/* <Image
           src={session.user.image}
           layout="fixed"
@@ -18,10 +18,11 @@ const Page = ({ articleCount = 0 }) => {
           width="200"
           alt=""
         /> */}
-      <p>{JSON.stringify(session)}</p>
+      {/* <p>{JSON.stringify(session)}</p> */}
       <button onClick={() => signOut()}>Sign Out</button>
-    </>
+      </div>
   );
+      }
 };
 
 export default Page;

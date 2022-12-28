@@ -1,6 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react";
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
