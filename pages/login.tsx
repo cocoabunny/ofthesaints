@@ -9,10 +9,14 @@ const LoginPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    setTimeout(() => {
-      router.push("/");
-    }, 5000);
-  }, [])
+    if (session && session.user) {
+      setTimeout(() => {
+        router.push("/");
+      }, 5000);
+    }
+    }, [])
+    
+   
 
 
   if (session && session.user) {
@@ -40,13 +44,13 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="h-full w-full bg-gradient-to-br from-[#DDD6A8] to-[#ECA3AA]">
-      <p>
+    <div className="h-screen w-full bg-gradient-to-br from-[#DDD6A8] to-[#ECA3AA]">
+      <h1>
         Currently you are not signed, in.
         <br />
         Would you like to change that?
-      </p>
-      <button className="bg-red-300" onClick={() => signIn()}>Sign in</button>
+      </h1>
+      <button className="bg-ita" onClick={() => signIn()}>Sign in</button>
       </div>
   );
 };
