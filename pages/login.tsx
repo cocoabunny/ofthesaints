@@ -1,5 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
-// import Image from "next/image";
+import Image from "next/image";
 // import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -9,15 +9,16 @@ const LoginPage = () => {
   const router = useRouter();
 
   useEffect(() => {
+    let interval: NodeJS.Timeout | undefined;
+    
     if (session && session.user) {
-      setTimeout(() => {
+      interval = setTimeout(() => {
         router.push("/");
       }, 5000);
     }
-    }, [])
-    
-   
 
+    return () => interval && clearInterval(interval);
+  }, []);
 
   if (session && session.user) {
     return (
@@ -26,19 +27,18 @@ const LoginPage = () => {
           <h1>Welcome {session.user.name}</h1>
           <h2>follow the rabbit trail for a surprise...</h2>
         </div>
-          
-        
 
-
-        {/* <Image
+        <Image
           src={session.user.image}
           layout="fixed"
           height="200"
           width="200"
           alt="Avatar"
           style={{ borderRadius: "50px" }}
-        /> */}
-        <button className="bg-blue-300" onClick={() => signOut()}>Sign out</button>
+        />
+        <button className="bg-blue-300" onClick={() => signOut()}>
+          Sign out
+        </button>
       </div>
     );
   }
@@ -50,8 +50,10 @@ const LoginPage = () => {
         <br />
         Would you like to change that?
       </h1>
-      <button className="bg-ita" onClick={() => signIn()}>Sign in</button>
-      </div>
+      <button className="bg-ita" onClick={() => signIn()}>
+        Sign in
+      </button>
+    </div>
   );
 };
 
