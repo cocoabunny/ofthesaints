@@ -1,13 +1,12 @@
 import Head from "next/head";
 import React from "react";
-import { useSession, getSession } from "next-auth/react";
-import { unstable_getServerSession } from "next-auth/next";
+import { useSession } from "next-auth/react";
 import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
 import ConditionalTest from "../components/ConditionalTest";
-import { Session } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]";
-import { GetServerSideProps } from "next/types";
+import ITA_Pic from "public/assets/ITA_ScreenShot.png";
+import Image from "next/image";
+
 
 const Page = () => {
   const { data, status } = useSession();
@@ -70,7 +69,10 @@ const Page = () => {
               </h1>
               <h2>ITA Panels</h2>
               <br />
-              <h3>Technologies</h3> <br />
+              <Image src={ITA_Pic} alt="Screenshot of ITA Panels Website" width="600" height="350"/> <br/>
+              <a href="itapanels.com.au" className="hover:bg-chief">Website</a> <br/>
+              <a href="https://github.com/cocoabunny/ita_draft" className="hover:bg-chief">Repository</a>
+              <h3>Technologies</h3> <br/>
               <ul>
                 <li>Tailwind CSS</li>
                 <li>React</li>
@@ -81,12 +83,13 @@ const Page = () => {
               </ul>
               <br />
               <div>
-              <img
+              {/* <Image 
+              src={ITA_Pic}
                 alt="Screenshot of ITA Panels Website"
-                loading="lazy"
-                src=""
-              />
-                WEBSITE IMAGE
+                layout="fixed"
+                height="200"
+                width="200" /> */}
+                
               </div>
               <p>
                 For ITA Panels, the owner needed a site that would point

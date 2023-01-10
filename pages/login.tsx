@@ -18,7 +18,7 @@ const LoginPage = () => {
     }
 
     return () => interval && clearInterval(interval);
-  }, []);
+  }, [router, session]);
 
   if (session && session.user) {
     return (
