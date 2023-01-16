@@ -2,10 +2,10 @@ import Head from "next/head";
 import React from "react";
 import { useSession } from "next-auth/react";
 import Navbar from "../components/Navbar";
-import ProjectCard from "../components/ProjectCard";
 import ConditionalTest from "../components/ConditionalTest";
 import ITA_Pic from "public/assets/ITA_ScreenShot.png";
 import Image from "next/image";
+import goodByeLogo from "../public/assets/flight.gif";
 
 
 const Page = () => {
@@ -37,6 +37,7 @@ const Page = () => {
             <h2>Introductio</h2>
             <h3>About CTA</h3>
             <p>Lorem Ipsum it so fiddley day a way to play</p>
+            <a href="/public/assets/cdd.resume.v3.pdf" attributes-list download className="hover:text-chief">Resume</a>
           </section>
 
           {/* --Skills-- */}
@@ -67,10 +68,10 @@ const Page = () => {
               >
                 {status === "authenticated" ? "Aromatic" : "Stinky"}
               </h1>
-              <h2>ITA Panels</h2>
+              <h2><a href="https://www.itapanels.com/" className="hover:bg-chief">ITA Panels</a></h2>
               <br />
               <Image src={ITA_Pic} alt="Screenshot of ITA Panels Website" width="600" height="350"/> <br/>
-              <a href="itapanels.com.au" className="hover:bg-chief">Website</a> <br/>
+              <br/>
               <a href="https://github.com/cocoabunny/ita_draft" className="hover:bg-chief">Repository</a>
               <h3>Technologies</h3> <br/>
               <ul>
@@ -109,6 +110,21 @@ const Page = () => {
               </p>
             </span>
             <div>{/* <ProjectCard /> */}</div>
+          </section>
+          <section className="py-10 bg-burn w-full">
+            <h3>Thanks for reading<br/>Login to follow the rabbit trail</h3>
+<div className="flex-col">
+  <Image src={goodByeLogo} 
+  alt="8 bit emoji, waving goodbye" 
+  layout="fixed"
+  height="50"
+  width="50" />
+<ul>
+    <li><a href="https://www.linkedin.com/in/canaan-de-los-santos-18b370240">LinkedIn</a></li>
+    <li><a href="https://github.com/cocoabunny">GitHub</a></li>
+    <li><a className="hover:text-chief" href="mailto:canaandelossantos@gmail.com">canaandelossantos@gmail.com</a></li>
+    </ul>
+</div>
           </section>
         </main>
       </div>
