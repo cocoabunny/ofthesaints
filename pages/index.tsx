@@ -6,36 +6,54 @@ import ConditionalTest from "../components/ConditionalTest";
 import ITA_Pic from "public/assets/ITA_ScreenShot.png";
 import Image from "next/image";
 import goodByeLogo from "../public/assets/flight.gif";
+import { useState } from "react";
+import { renderToHTML } from "next/dist/server/render";
 
 
 const Page = () => {
   const { data, status } = useSession();
+  const [isShown, setIsShown] = useState(false);
+
+const titleOne = () => {
+  onmouseenter
+}
+
 
   return (
     <div className="font-studio">
-      <div
-        className={`${
+      {/* conditional rendering for background color */}
+      <div className={`${
           status === "authenticated"
             ? "bg-cream text-coco"
             : "bg-coco text-cream"
-        } `}
-      >
+        } `}>
         <Head>
           <title>Of The Saints</title>
           <meta name="description" content="Canaan de los Santos' Portfolio" />
           <link rel="icon" href="/coco_test.ico" />
         </Head>
-
         <Navbar />
 
-        <div className="pt-20">
+        {/* <div className="pt-20">
           <ConditionalTest status={status} />
-        </div>
+        </div> */}
         <main className="">
           {/* -- About Section --  */}
           <section className="pt-20">
-            <h2>Introductio</h2>
-            <h3>About CTA</h3>
+            <h1
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+            >Canaan de los Santos</h1>
+            {isShown && (
+              <h1>Promise of the Saints</h1>
+            )}
+           
+
+            {/* <h2
+            >Ad astra per aspera</h2> */}
+            {/* <h2
+            >Through adversity to the stars</h2> */}
+
             <p>Lorem Ipsum it so fiddley day a way to play</p>
             <a href="/public/assets/cdd.resume.v3.pdf" attributes-list download className="hover:text-chief">Resume</a>
           </section>
