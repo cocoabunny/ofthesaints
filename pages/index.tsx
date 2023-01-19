@@ -14,9 +14,13 @@ const Page = () => {
   const { data, status } = useSession();
   const [isShown, setIsShown] = useState(false);
 
-const titleOne = () => {
-  onmouseenter
-}
+  const hoverHandler = () => {
+    setIsShown(true)
+    
+  }
+  const outHandler = () => {
+    setIsShown(false)
+  }
 
 
   return (
@@ -40,15 +44,18 @@ const titleOne = () => {
         <main className="">
           {/* -- About Section --  */}
           <section className="pt-20">
-            <h1
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
-            >Canaan de los Santos</h1>
-            {isShown && (
-              <h1>Promise of the Saints</h1>
-            )}
            
-
+           <div 
+           title="Project Title, Canaan de los Santos or Promise of the Saints"
+           onPointerEnter={hoverHandler}
+           onPointerLeave={outHandler}
+           >{isShown ? <h1>Canaan de los Santos</h1> : <h1>Promise of the Saints</h1>}</div>
+           <br/>
+           <div 
+           title="Call to Action, in Latin and translated to englishProject Title, Canaan de los Santos or Promise of the Saints"
+           onPointerEnter={hoverHandler}
+           onPointerLeave={outHandler}
+           >{isShown ? <h2>Ad astra per aspera</h2> : <h2>Through adversity to the stars</h2>}</div>
             {/* <h2
             >Ad astra per aspera</h2> */}
             {/* <h2
