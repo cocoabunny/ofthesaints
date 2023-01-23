@@ -7,7 +7,16 @@ import ITA_Pic from "public/assets/ITA_ScreenShot.png";
 import Image from "next/image";
 import goodByeLogo from "../public/assets/flight.gif";
 import { useState } from "react";
-import { renderToHTML } from "next/dist/server/render";
+import {AiOutlineHtml5 } from "react-icons/ai";
+import {DiCss3} from "react-icons/di";
+import {SiTailwindcss, SiJavascript, SiNextdotjs, SiCoda, SiFigma, SiAdobelightroom, SiAdobephotoshop, SiAdobexd} from "react-icons/si";
+import {FaReact} from "react-icons/fa";
+import {TbBrandBootstrap} from "react-icons/tb";
+import {GrMysql} from "react-icons/gr";
+import {RxVercelLogo} from "react-icons/rx";
+
+
+
 
 
 const Page = () => {
@@ -28,8 +37,8 @@ const Page = () => {
       {/* conditional rendering for background color */}
       <div className={`${
           status === "authenticated"
-            ? "bg-cream text-coco"
-            : "bg-coco text-cream"
+            ? "bg-cream m-[.5rem] text-coco w-full"
+            : "bg-coco text-cream m-[.5rem] w-full"
         } `}>
         <Head>
           <title>Of The Saints</title>
@@ -44,42 +53,38 @@ const Page = () => {
         <main className="">
           {/* -- About Section --  */}
           <section className="pt-20">
-           
-           <div 
+           <div
            title="Project Title, Canaan de los Santos or Promise of the Saints"
            onPointerEnter={hoverHandler}
            onPointerLeave={outHandler}
            >{isShown ? <h1>Canaan de los Santos</h1> : <h1>Promise of the Saints</h1>}</div>
-           <br/>
-           <div 
-           title="Call to Action, in Latin and translated to englishProject Title, Canaan de los Santos or Promise of the Saints"
-           onPointerEnter={hoverHandler}
-           onPointerLeave={outHandler}
-           >{isShown ? <h2>Ad astra per aspera</h2> : <h2>Through adversity to the stars</h2>}</div>
-            {/* <h2
-            >Ad astra per aspera</h2> */}
-            {/* <h2
-            >Through adversity to the stars</h2> */}
-
-            <p>Lorem Ipsum it so fiddley day a way to play</p>
-            <a href="/public/assets/cdd.resume.v3.pdf" attributes-list download className="hover:text-chief">Resume</a>
-          </section>
-
+                       <p>Howdy, <br/>I am a passionate developer and photographer, specializing in providing creative and practical solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs to a website, or have any photography needs, I would love to hear from you! </p>
+            
+          </section>          
           {/* --Skills-- */}
-          <section className="py-10">
+          <section className="my-10 mx-10">
             <span>
-              <h2>Skills</h2>
+              <h2>Tech I work with </h2>
             </span>
-            <h3>Skills CTA</h3>
-            <ul>
-              <li>A skill</li>
-              <li>A skill</li>
-              <li>A skill</li>
-              <li>A skill</li>
-              <li>A skill</li>
-              <li>A skill</li>
-              <li>A skill</li>
+            <ul className="grid grid-cols-2 gap-2 border-solid border-[.1em] rounded-md border-burn pb-2 pr-2">
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl "><AiOutlineHtml5 /></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><DiCss3/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiTailwindcss/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiJavascript/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><FaReact/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiNextdotjs/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><TbBrandBootstrap/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><GrMysql/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiFigma/></li>              
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiAdobelightroom/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiAdobephotoshop/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiAdobexd/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><RxVercelLogo/></li>
+              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiCoda/></li>
             </ul>
+            <button className="bg-cream m-[.5rem] text-coco rounded-md shadow-xl my-5">
+              <a href="/public/assets/cdd.resume.v3.pdf" attributes-list download className="hover:text-chief">Resume</a>
+              </button>
           </section>
 
           {/* -- Portfolio --  */}
