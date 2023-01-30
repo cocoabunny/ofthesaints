@@ -11,7 +11,7 @@ const Navbar = () => {
   if (session && session.user)
     return (
       <div className="bg-burn text-cream">
-        <div className="fixed w-full h-20 shadow-xl z-[100] bg-burn text-cream">
+        <div className="fixed w-full h-20 z-[100] bg-burn text-cream">
           <div className="flex justify-between items-center w-full px-2 2x:px-16">
             <Image
               src={LeapImage}
@@ -20,6 +20,7 @@ const Navbar = () => {
               height={85}
               className=""
             />
+            <h1 className="text-cream">oftheSaints</h1>
             <button className="bg-chief mr-2 p-2" onClick={() => signOut()}>
               Sign Out
             </button>
@@ -28,9 +29,10 @@ const Navbar = () => {
       </div>
     );
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100] bg-chief text-coco">
+    <div className="fixed w-full h-20 z-[100] text-coco">
       <div className="flex justify-between items-center w-full px-2 2x:px-16">
         <Image src={FlightImage} alt="flying blob" width={85} height={85} />
+        <h1 className="text-cream">of the `Saints</h1>
         <button className="bg-[#B6772E] mr-2 p-2">
           <Link href="/login">Log In</Link>
         </button>

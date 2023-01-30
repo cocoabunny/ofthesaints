@@ -33,13 +33,13 @@ const Page = () => {
 
 
   return (
-    <div className="font-studio">
+    <div className={` font-studio w-full py-20 ${
+      status === "authenticated"
+        ? "bg-cream text-coco"
+        : "bg-coco text-cream"
+    } `}>
       {/* conditional rendering for background color */}
-      <div className={`${
-          status === "authenticated"
-            ? "bg-cream m-[.5rem] text-coco w-full"
-            : "bg-coco text-cream m-[.5rem] w-full"
-        } `}>
+     
         <Head>
           <title>Of The Saints</title>
           <meta name="description" content="Canaan de los Santos' Portfolio" />
@@ -47,18 +47,15 @@ const Page = () => {
         </Head>
         <Navbar />
 
-        {/* <div className="pt-20">
-          <ConditionalTest status={status} />
-        </div> */}
         <main className="">
           {/* -- About Section --  */}
-          <section className="pt-20">
+          <section className="pt-20 py-10 my-10 mx-10">
            <div
            title="Project Title, Canaan de los Santos or Promise of the Saints"
            onPointerEnter={hoverHandler}
            onPointerLeave={outHandler}
-           >{isShown ? <h1>Canaan de los Santos</h1> : <h1>Promise of the Saints</h1>}</div>
-                       <p>Howdy, <br/>I am a passionate developer and photographer, specializing in providing creative and practical solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs to a website, or have any photography needs, I would love to hear from you! </p>
+           >{isShown ?  <h1>Promise of the Saints</h1>: <h1>Canaan de los Santos</h1>}</div>
+                       <p>Howdy I'm Canaan, <br/> a passionate junior web developer and photographer. I specialize in providing creative and practical solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs a website, or have any photography needs, I would love to hear from you! </p>
             
           </section>          
           {/* --Skills-- */}
@@ -67,61 +64,40 @@ const Page = () => {
               <h2>Tech I work with </h2>
             </span>
             <ul className="grid grid-cols-2 gap-2 border-solid border-[.1em] rounded-md border-burn pb-2 pr-2">
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl "><AiOutlineHtml5 /></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><DiCss3/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiTailwindcss/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiJavascript/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><FaReact/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiNextdotjs/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><TbBrandBootstrap/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><GrMysql/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiFigma/></li>              
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiAdobelightroom/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiAdobephotoshop/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiAdobexd/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><RxVercelLogo/></li>
-              <li className="bg-cream m-[.5rem] pl-3 text-coco text-5xl rounded-md shadow-xl"><SiCoda/></li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><AiOutlineHtml5 className="text-5xl"/>HTML5</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><DiCss3 className="text-5xl"/>CSS3</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiTailwindcss className="text-5xl"/>Tailwind CSS</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiJavascript className="text-5xl"/>Javascript</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><FaReact className="text-5xl"/>React.js</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiNextdotjs className="text-5xl"/>Next.js</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><TbBrandBootstrap className="text-5xl"/>Bootstrap</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><GrMysql className="text-5xl"/>MYQL</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiFigma className="text-5xl"/>Figma</li>              
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobelightroom className="text-5xl"/>Lightroom</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobephotoshop className="text-5xl"/>Photoshop</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobexd className="text-5xl"/>Xd</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><RxVercelLogo className="text-5xl"/>Vercel</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiCoda className="text-5xl"/>Coda</li>
             </ul>
-            <button className="bg-cream m-[.5rem] text-coco rounded-md shadow-xl my-5">
-              <a href="/public/assets/cdd.resume.v3.pdf" attributes-list download className="hover:text-chief">Resume</a>
+       <span className="flex flex-row justify-center">
+       <button className="bg-cream m-[.7rem] p-[.7rem] text-coco rounded-md shadow-xl my-5">
+              <a href="/public/assets/cdd.resume.v3.pdf" attributes-list download className="hover:text-chief text-2xl">Download my Resume!</a>
               </button>
+       </span>           
           </section>
 
           {/* -- Portfolio --  */}
-          <section className="py-10">
-            <span>
-              {status === "authenticated" ? <h1>Aromatic</h1> : <h1>Stinky</h1>}
-              <h1
-                className={`text-3xl text-bold ${
-                  status === "authenticated" ? "text-black" : "text-red-500"
-                }`}
-              >
-                {status === "authenticated" ? "Aromatic" : "Stinky"}
+          <section className="py-10 my-10 mx-10">   
+          <span><h1>FOLIO</h1></span>     
+              <h1 className={`text-3xl text-bold 
+              ${ status === "authenticated" ? "text-black" : "text-red-500" }`}>              
               </h1>
               <h2><a href="https://www.itapanels.com/" className="hover:bg-chief">ITA Panels</a></h2>
               <br />
               <Image src={ITA_Pic} alt="Screenshot of ITA Panels Website" width="600" height="350"/> <br/>
               <br/>
               <a href="https://github.com/cocoabunny/ita_draft" className="hover:bg-chief">Repository</a>
-              <h3>Technologies</h3> <br/>
-              <ul>
-                <li>Tailwind CSS</li>
-                <li>React</li>
-                <li>Figma</li>
-                <li>Photoshop</li>
-                <li>Lightroom</li>
-                <li>Vercel</li>
-              </ul>
               <br />
-              <div>
-              {/* <Image 
-              src={ITA_Pic}
-                alt="Screenshot of ITA Panels Website"
-                layout="fixed"
-                height="200"
-                width="200" /> */}
-                
-              </div>
               <p>
                 For ITA Panels, the owner needed a site that would point
                 customers to his business email, work phone, address; as well as
@@ -138,10 +114,10 @@ const Page = () => {
                 <br />
                 To date this site has had 1500 visitors.
               </p>
-            </span>
+          
             <div>{/* <ProjectCard /> */}</div>
           </section>
-          <section className="py-10 bg-burn w-full">
+          <section className=" py-10 mb-20 bg-burn w-full">
             <h3>Thanks for reading<br/>Login to follow the rabbit trail</h3>
 <div className="flex-col">
   <Image src={goodByeLogo} 
@@ -158,7 +134,6 @@ const Page = () => {
           </section>
         </main>
       </div>
-    </div>
   );
 };
 
