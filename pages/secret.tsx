@@ -1,28 +1,29 @@
 import React from "react";
 // import Image from "next/image";
 import { useSession, signOut, getSession } from "next-auth/react";
+import GalleryNav from "./GalleryNavBar.jsx";
 
 const Page = ({ articleCount = 0 }) => {
   const { data: session } = useSession();
 
   if (session) {
   return (
+    
 <div className="bg-chief h-screen w-full">
-      <p className="bg-rose-200">
-        This is a secret Page, congrats {session.user.name}
+ <GalleryNav />
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+      <p className="bg-rose-200 mt-">
+      thank you for leaving your details, enjoy the Gallery {session.user.name}
       </p>
-      {/* <Image
-          src={session.user.image}
-          layout="fixed"
-          height="200"
-          width="200"
-          alt=""
-        /> */}
-      {/* <p>{JSON.stringify(session)}</p> */}
       <button onClick={() => signOut()}>Sign Out</button>
       </div>
+      
   );
-      }
+  }
 };
 
 export default Page;

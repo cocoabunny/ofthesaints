@@ -1,6 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
-// import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -13,7 +12,7 @@ const LoginPage = () => {
     
     if (session && session.user) {
       interval = setTimeout(() => {
-        router.push("/");
+        router.push("/secret");
       }, 5000);
     }
 
@@ -25,7 +24,7 @@ const LoginPage = () => {
       <div className="bg-[#4B584B] bg-cover">
         <div>
           <h1>Welcome {session.user.name}</h1>
-          <h2>follow the rabbit trail for a surprise...</h2>
+          <h2>to the Gallery</h2>
         </div>
 
         <Image
@@ -46,12 +45,11 @@ const LoginPage = () => {
   return (
     <div className="h-screen w-full bg-gradient-to-br from-[#DDD6A8] to-[#ECA3AA]">
       <h1>
-        Currently you are not signed, in.
-        <br />
-        Would you like to change that?
+        To view oftheSaints' gallery,<br/>
+         please Login 
       </h1>
-      <button className="bg-ita" onClick={() => signIn()}>
-        Sign in
+      <button className="" onClick={() => signIn()}>
+        Log In
       </button>
     </div>
   );

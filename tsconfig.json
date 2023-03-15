@@ -28,7 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/noteApp.jsx", "pages/note.jsx"  ],
+, "pages/noteApp.jsx", "pages/noteApp.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -14,7 +14,11 @@ const NotFound = () => {
   return (
     <div className="bg-orange-500">
       <h1>Bummer.....</h1>
-      <h2>That page doesn't exist</h2>
+      <h2>
+        That page doesn't exist
+        <br />
+        Or does it?
+      </h2>
     </div>
   );
 };

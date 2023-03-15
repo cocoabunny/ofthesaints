@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import Navbar from "../components/Navbar";
 import ConditionalTest from "../components/ConditionalTest";
 import ITA_Pic from "public/assets/ITA_ScreenShot.png";
@@ -14,8 +14,8 @@ import {FaReact} from "react-icons/fa";
 import {TbBrandBootstrap} from "react-icons/tb";
 import {GrMysql} from "react-icons/gr";
 import {RxVercelLogo} from "react-icons/rx";
-import Note from "./note";
-
+import Note from "./noteApp";
+import Link from "next/link";
 
 
 
@@ -55,8 +55,10 @@ const Page = () => {
            title="Project Title, Canaan de los Santos or Promise of the Saints"
            onPointerEnter={hoverHandler}
            onPointerLeave={outHandler}
-           >{isShown ?  <h1>Promise of the Saints</h1>: <h1>Canaan de los Santos</h1>}</div>
-                       <p>Howdy I'm Canaan, <br/> a passionate junior web developer and photographer. I specialize in providing creative and practical solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs a website, or have any photography needs, I would love to hear from you! </p>
+           >{isShown ?  <h1>Hey,  I’m Canaan de los Santos   —   Multidisciplinary Digital Creative, Specialising in Front End Development & Photography.</h1>
+           : <h1>hey,  i’m canaan de los santos   —   multidisciplinary digital creative, specialising in front end development & photography.</h1>}
+           </div>
+                       <p>born and raised in Southern California,<br/> I am based currently in Melbourne Australia, where I specialize in providing creative and practical solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs a website, or have any photography needs, I would love to hear from you! </p>
             
           </section>          
           {/* --Skills-- */}
@@ -65,20 +67,40 @@ const Page = () => {
               <h2>Tech I work with </h2>
             </span>
             <ul className="grid grid-cols-2 gap-2 border-solid border-[.1em] rounded-md border-burn pb-2 pr-2">
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><AiOutlineHtml5 className="text-5xl"/>HTML5</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><DiCss3 className="text-5xl"/>CSS3</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiTailwindcss className="text-5xl"/>Tailwind CSS</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiJavascript className="text-5xl"/>Javascript</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><FaReact className="text-5xl"/>React.js</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiNextdotjs className="text-5xl"/>Next.js</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><TbBrandBootstrap className="text-5xl"/>Bootstrap</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><GrMysql className="text-5xl"/>MYQL</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiFigma className="text-5xl"/>Figma</li>              
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobelightroom className="text-5xl"/>Lightroom</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobephotoshop className="text-5xl"/>Photoshop</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobexd className="text-5xl"/>Xd</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><RxVercelLogo className="text-5xl"/>Vercel</li>
-              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiCoda className="text-5xl"/>Coda</li>
+            <div
+           title="HTML Card"
+           onPointerEnter={hoverHandler}
+           onPointerLeave={outHandler}
+           >{isShown ?  <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><AiOutlineHtml5 className="text-5xl"/></li>
+           : <li>HTML5</li>}
+           </div>
+              
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><DiCss3 className="text-5xl"/>
+              CSS3</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiTailwindcss className="text-5xl"/>
+              Tailwind CSS</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiJavascript className="text-5xl"/>
+              Javascript</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><FaReact className="text-5xl"/>
+              React.js</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiNextdotjs className="text-5xl"/>
+              Next.js</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><TbBrandBootstrap className="text-5xl"/>
+              Bootstrap</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><GrMysql className="text-5xl"/>
+              MYQL</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiFigma className="text-5xl"/>
+              Figma</li>              
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobelightroom className="text-5xl"/>
+              Lightroom</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobephotoshop className="text-5xl"/>
+              Photoshop</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiAdobexd className="text-5xl"/>
+              Xd</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><RxVercelLogo className="text-5xl"/>
+              Vercel</li>
+              <li className="bg-cream m-[.5rem] flex flex-col justify-center items-center text-coco rounded-md shadow-xl"><SiCoda className="text-5xl"/>
+              Coda</li>
             </ul>
        <span className="flex flex-row justify-center">
        <button className="bg-cream m-[.7rem] p-[.7rem] text-coco rounded-md shadow-xl my-5">
@@ -114,12 +136,33 @@ const Page = () => {
                 projects, so I chose to pay for the domain through vercel and
                 host the entire site.             
               </p>
-          
-            <div>{/* <ProjectCard /> */}</div>
           </section>
+            
+            {/* NotePad Section */}
+          
+          <div className="">
+          <h2>notePad Application</h2>
+          <p></p>
           <Note />
+          </div>
+          
+          {/* Photo Gallery */}
+          <section>
+          <h2>Gallery</h2>
+              { status === "authenticated" ? (
+                  <button className="bg-chief mr-2 p-2" onClick={() => signOut()}>
+                  Sign Out
+                </button>
+              ) : (
+               
+               <button className="bg-[#B6772E] mr-2 p-2">
+               <Link href="/login">Login</Link>
+             </button>
+              )}
+          </section>
+          
+          {/* Footer */}
           <section className=" py-10 mb-20 bg-burn w-full">
-            <h3>Thanks for reading<br/>Login to follow the rabbit trail</h3>
 <div className="flex-col">
   <Image src={goodByeLogo} 
   alt="8 bit emoji, waving goodbye" 
