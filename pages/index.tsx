@@ -14,6 +14,7 @@ import {FaReact} from "react-icons/fa";
 import {TbBrandBootstrap} from "react-icons/tb";
 import {GrMysql} from "react-icons/gr";
 import {RxVercelLogo} from "react-icons/rx";
+import Note from "./note";
 
 
 
@@ -46,7 +47,7 @@ const Page = () => {
           <link rel="icon" href="/coco_test.ico" />
         </Head>
         <Navbar />
-
+        
         <main className="">
           {/* -- About Section --  */}
           <section className="pt-20 py-10 my-10 mx-10">
@@ -86,6 +87,7 @@ const Page = () => {
        </span>           
           </section>
 
+
           {/* -- Portfolio --  */}
           <section className="py-10 my-10 mx-10">   
           <span><h1>FOLIO</h1></span>     
@@ -110,13 +112,12 @@ const Page = () => {
                 build, the last piece of the puzzle was deploying the site to a
                 host. Vercel has integration for CRA and Next React Framework
                 projects, so I chose to pay for the domain through vercel and
-                host the entire site.
-                <br />
-                To date this site has had 1500 visitors.
+                host the entire site.             
               </p>
           
             <div>{/* <ProjectCard /> */}</div>
           </section>
+          <Note />
           <section className=" py-10 mb-20 bg-burn w-full">
             <h3>Thanks for reading<br/>Login to follow the rabbit trail</h3>
 <div className="flex-col">
