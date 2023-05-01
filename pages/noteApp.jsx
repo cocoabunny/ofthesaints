@@ -1,9 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+import { useSession } from "next-auth/react";
 
 const noteApp = () => {
   const [notes, setNotes] = useState([]);
+  const { data, status } = useSession();
 
   useEffect(() => {
     // Get notes from local storage
@@ -97,7 +99,7 @@ const noteApp = () => {
         {/* Note Input / Form */}
         <div id="form-group">
           <input
-            className="bg-cream text-coco text-2xl italic placeholder-chief justify-center mt-4 mx-12 px-[.3em] w-3/4 rounded-t-md"
+            className="text-coco text-2xl italic placeholder-chief justify-center mt-4 mx-12 px-[.3em] w-3/4 rounded-t-md"
             ref={noteTitleRef}
             type="text"
             placeholder="Note title"
@@ -110,7 +112,7 @@ const noteApp = () => {
           />
           <br />
           <textarea
-            className="bg-cream text-coco italic placeholder-chief mx-12 px-[.3em] w-3/4 rounded-b-md"
+            className=" text-coco italic placeholder-chief mx-12 px-[.3em] w-3/4 rounded-b-md"
             ref={noteDescriptionRef}
             rows="3"
             placeholder="Note description"

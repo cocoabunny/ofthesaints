@@ -55,10 +55,10 @@ const Page = () => {
            title="Project Title, Canaan de los Santos or Promise of the Saints"
            onPointerEnter={hoverHandler}
            onPointerLeave={outHandler}
-           >{isShown ?  <h1>Hey,  I’m Canaan de los Santos   —   Multidisciplinary Digital Creative, Specialising in Front End Development & Photography.</h1>
-           : <h1>hey,  i’m canaan de los santos   —   multidisciplinary digital creative, specialising in front end development & photography.</h1>}
+           >{isShown ?  <h1>Hey,  I’m Canaan de los Santos   —   Web Solutions, Specialising in Front End Development & Photography.</h1>
+           : <h1>hey,  i’m canaan de los santos   —   web solutions, specialising in front end development & photography.</h1>}
            </div>
-                       <p>born and raised in Southern California,<br/> I am based currently in Melbourne Australia, where I specialize in providing creative and practical solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs a website, or have any photography needs, I would love to hear from you! </p>
+                       <p>born and raised in Southern California,<br/> I am based currently in Melbourne Australia, where I offer creative and practical web solutions for small businesses. If you're looking for a front end developer to add to your team, have a business that needs a website, or have any events you'd like photographed, I would love to hear from you! </p>
             
           </section>          
           {/* --Skills-- */}
@@ -142,7 +142,7 @@ const Page = () => {
           
           <div className="">
           <h2>notePad Application</h2>
-          <p></p>
+          <p>This was my first React Project, I coded this project focusing around having the ability to Create Data, Read Data, Update, and Delete (CRUD). It was a great first project and I had the great pleasure of refactoring it for this current portfolio site.</p>
           <Note />
           </div>
           
