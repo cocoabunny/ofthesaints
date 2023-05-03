@@ -34,9 +34,25 @@ const Page = ({ articleCount = 0 }) => {
         // className="opacity-0 group-hover:opacity-100 w-2/3 h-2/3 rounded-lg"
           className="opacity-0 absolute object-cover w-full h-full group-hover:opacity-100"
         />
+{/* Zombie Code */}
+        <div class="relative p-2">
+          <div class="mt-40">
+            <div
+              class="absolute transition-all transform top-8 translate-y-12 opacity-100 group-hover:opacity-0 group-hover:translate-y-0">
+              <div class="p-2">
+                <p class="text-sm text-white ">
+                  image hover in text using tailwind css
+                </p>
+                <button class="px-4 py-2 text-sm text-white bg-indigo-600">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Normal code */}
+{/*         
         <div className="relative">
         <h1 className="opacity-100 group-hover:opacity-0 text-6xl">Waterfall</h1>
-        </div>
+        </div> */}
        
 </div>
 </div>
