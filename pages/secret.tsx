@@ -24,16 +24,20 @@ const Page = ({ articleCount = 0 }) => {
      Welcome to Galleria de los Santos {session.user.name}
       </h1>
       
-      <button onClick={() => signOut()}>Sign Out</button>
+      <button className="bg-cream" onClick={() => signOut()}>Sign Out</button>
       
-      <div class="container mx-auto space-y-1 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
-    <div class="w-full rounded">
+      <div className="container mx-auto space-y-1 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
+    <div className="relative block group">
         <Image 
         src={firstPicture} 
-        width={500}
-        height={500}
-        alt="picture"
+        alt="waterfall picture"
+        // className="opacity-0 group-hover:opacity-100 w-2/3 h-2/3 rounded-lg"
+          className="opacity-0 absolute object-cover w-full h-full group-hover:opacity-100"
         />
+        <div className="relative">
+        <h1 className="opacity-100 group-hover:opacity-0 text-6xl">Waterfall</h1>
+        </div>
+       
 </div>
 </div>
        {/* Footer */}
@@ -43,7 +47,8 @@ const Page = ({ articleCount = 0 }) => {
   alt="8 bit emoji, waving goodbye" 
   layout="fixed"
   height="50"
-  width="50" />
+  width="50" 
+ />
 <ul>
     <li><a href="https://www.linkedin.com/in/canaan-de-los-santos-18b370240">LinkedIn</a></li>
     <li><a href="https://github.com/cocoabunny">GitHub</a></li>
