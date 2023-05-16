@@ -4,7 +4,8 @@ import { useSession, signOut, getSession } from "next-auth/react";
 import GalleryNav from "./GalleryNavBar.jsx";
 import goodByeLogo from "../public/assets/flight.gif";
 import Image from "next/image.js";
-import firstPicture from "../.next/static/media/Gallery/Bek-4010.jpg";
+import firstPicture from "../public/assets/gallery/Alpine Alpha-3.jpg";
+import NUGallery from "../components/ThreadGallery.tsx";
 
 
 const Page = ({ articleCount = 0 }) => {
@@ -25,34 +26,35 @@ const Page = ({ articleCount = 0 }) => {
       </h1>
       
       <button className="bg-cream" onClick={() => signOut()}>Sign Out</button>
-      
+      <NUGallery className="w-full h-screen"
+  />
       <div className="container mx-auto space-y-1 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
-    <div className="relative block group">
+    <div className="relative block group bg-cream">
         <Image 
         src={firstPicture} 
         alt="waterfall picture"
         // className="opacity-0 group-hover:opacity-100 w-2/3 h-2/3 rounded-lg"
-          className="opacity-0 absolute object-cover w-full h-full group-hover:opacity-100"
+          className="opacity-0 fixed object-cover w-1/2 h-1/2 group-hover:opacity-100"
         />
 {/* Zombie Code */}
-        <div class="relative p-2">
+        <div class="absolute p-2 bg-burn">
           <div class="mt-40">
             <div
-              class="absolute transition-all transform top-8 translate-y-12 opacity-100 group-hover:opacity-0 group-hover:translate-y-0">
+              class="relative transition-all transform top-8 translate-y-12 opacity-100 group-hover:opacity-0 group-hover:translate-y-0">
               <div class="p-2">
                 <p class="text-sm text-white ">
-                  image hover in text using tailwind css
+                  Stella // High Country, Victoria Australia
                 </p>
-                <button class="px-4 py-2 text-sm text-white bg-indigo-600">Read More</button>
+                <button class="px-4 py-2 text-sm text-white bg-indigo-600">New Tab Out Full Screen BTN</button>
               </div>
             </div>
           </div>
         </div>
         {/* Normal code */}
-{/*         
+        
         <div className="relative">
         <h1 className="opacity-100 group-hover:opacity-0 text-6xl">Waterfall</h1>
-        </div> */}
+        </div>
        
 </div>
 </div>
