@@ -19,10 +19,10 @@ const Navbar = () => {
   if (session && session.user)
     return (
       <div className="">
-        <div className="w-full h-20 z-[100] ">
+        <div className="w-full h-30 z-[100]">
           <div className="flex justify-between items-center w-full px-2 2x:px-16">
             <div
-              title="Project Title, Canaan de los Santos or Promise of the Saints"
+              title="Take me home country roads ;)"
               onPointerEnter={hoverHandler}
               onPointerLeave={outHandler}
             >
@@ -41,10 +41,10 @@ const Navbar = () => {
       </div>
     );
   return (
-    <div className="w-full h-20 z-[100]">
+    <div className="w-full h-30 z-[100]">
       <div className="flex justify-between items-center w-full px-2 2x:px-16">
         <div
-          title="Project Title, Canaan de los Santos or Promise of the Saints"
+          title="Take me home country roads ;)"
           onPointerEnter={hoverHandler}
           onPointerLeave={outHandler}
         >

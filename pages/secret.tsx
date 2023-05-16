@@ -15,7 +15,7 @@ const Page = ({ articleCount = 0 }) => {
   return (
     
 <div className="bg-chief h-screen sw-full">
- <GalleryNav className=""/>
+ <GalleryNav className="top-8"/>
  {/* <br/>
  <br/>
  <br/>
@@ -28,36 +28,7 @@ const Page = ({ articleCount = 0 }) => {
       <button className="bg-cream" onClick={() => signOut()}>Sign Out</button>
       <NUGallery className="w-full h-screen"
   />
-      <div className="container mx-auto space-y-1 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
-    <div className="relative block group bg-cream">
-        <Image 
-        src={firstPicture} 
-        alt="waterfall picture"
-        // className="opacity-0 group-hover:opacity-100 w-2/3 h-2/3 rounded-lg"
-          className="opacity-0 fixed object-cover w-1/2 h-1/2 group-hover:opacity-100"
-        />
-{/* Zombie Code */}
-        <div class="absolute p-2 bg-burn">
-          <div class="mt-40">
-            <div
-              class="relative transition-all transform top-8 translate-y-12 opacity-100 group-hover:opacity-0 group-hover:translate-y-0">
-              <div class="p-2">
-                <p class="text-sm text-white ">
-                  Stella // High Country, Victoria Australia
-                </p>
-                <button class="px-4 py-2 text-sm text-white bg-indigo-600">New Tab Out Full Screen BTN</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Normal code */}
-        
-        <div className="relative">
-        <h1 className="opacity-100 group-hover:opacity-0 text-6xl">Waterfall</h1>
-        </div>
-       
-</div>
-</div>
+
        {/* Footer */}
        <section className=" py-10 mb-20 bg-burn w-full">
 <div className="flex-col">
